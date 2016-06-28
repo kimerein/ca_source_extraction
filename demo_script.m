@@ -3,7 +3,8 @@ clear;
 
 addpath(genpath('utilities'));
              
-nam = 'demoMovie.tif';          % insert path to tiff stack here
+% nam = 'demoMovie.tif';          % insert path to tiff stack here
+nam = '\\home.files.med.harvard.edu\home\Imaging Data\Playing with Data\Testing Harvey Motion Correction\20160610 First mouse\A2a 1 s 5V\Corrected\a2astim_Slice01_Channel01_File001.tif';          % insert path to tiff stack here
 sframe=1;						% user input: first frame to read (optional, default 1)
 num2read=2000;					% user input: how many frames to read   (optional, default until the end)
 
@@ -18,7 +19,8 @@ d = d1*d2;                                          % total number of pixels
 
 K = 30;                                           % number of components to be found
 tau = 4;                                          % std of gaussian kernel (size of neuron) 
-p = 2;                                            % order of autoregressive system (p = 0 no dynamics, p=1 just decay, p = 2, both rise and decay)
+% p = 2;                                            % order of autoregressive system (p = 0 no dynamics, p=1 just decay, p = 2, both rise and decay)
+p = 1;                                            % order of autoregressive system (p = 0 no dynamics, p=1 just decay, p = 2, both rise and decay)
 merge_thr = 0.8;                                  % merging threshold
 
 options = CNMFSetParms(...                      
