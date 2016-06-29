@@ -4,9 +4,9 @@ clear;
 addpath(genpath('utilities'));
              
 % nam = 'demoMovie.tif';          % insert path to tiff stack here
-nam = '\\home.files.med.harvard.edu\home\Imaging Data\Playing with Data\Testing Harvey Motion Correction\20160610 First mouse\A2a 1 s 5V\Corrected\Fiji Combined Images\Combined Tif\combined_example_trials.tif';          % insert path to tiff stack here
+nam = '\\home.files.med.harvard.edu\home\Imaging Data\Playing with Data\Testing Harvey Motion Correction\20160610 First mouse\A2a 20 ms 5V\Corrected\combined.tif';          % insert path to tiff stack here
 sframe=1;						% user input: first frame to read (optional, default 1)
-num2read=2000;					% user input: how many frames to read   (optional, default until the end)
+num2read=3000;					% user input: how many frames to read   (optional, default until the end)
 
 Y = bigread2(nam,sframe,num2read);
 Y = Y - min(Y(:)); 
@@ -109,4 +109,4 @@ plot_components_GUI(Yr,A_or,C_or,b2,f2,Cn,options)
 
 %% make movie
 
-make_patch_video(A_or,C_or,b2,f2,Yr,Coor,options)
+% make_patch_video(A_or,C_or,b2,f2,Yr,Coor,options)
