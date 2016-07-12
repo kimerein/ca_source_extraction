@@ -6,7 +6,7 @@ addpath(genpath('utilities'));
 % nam = 'demoMovie.tif';          % insert path to tiff stack here
 % nam = '\\home.files.med.harvard.edu\home\Imaging Data\Playing with Data\Testing Harvey Motion Correction\20160610 First mouse\A2a 20 ms 5V\Corrected\combined.tif';          % insert path to tiff stack here
 % nam = '\\research.files.med.harvard.edu\neurobio\MICROSCOPE\Kim\Data from Imaging Rig\Sabatini ScanImage Data\20160610\mouse 1\Corrected\combined.tif';          % insert path to tiff stack here
-nam = '\\research.files.med.harvard.edu\neurobio\MICROSCOPE\Kim\Data from Imaging Rig\Sabatini ScanImage Data\20160610\mouse 1\Corrected\combined1.tif';          % insert path to tiff stack here
+nam = '\\research.files.med.harvard.edu\neurobio\MICROSCOPE\Kim\Data from Imaging Rig\Sabatini ScanImage Data\20160610\mouse 1\Corrected\combined4.tif';          % insert path to tiff stack here
 % nam = '\\home.files.med.harvard.edu\home\Imaging Data\Playing with Data\Testing Harvey Motion Correction\20160610 First mouse\A2a 1 s 5V\Corrected\Fiji Combined Images\Combined Tif\combined_example_trials.tif';          % insert path to tiff stack here
 sframe=1;						% user input: first frame to read (optional, default 1)
 num2read=100000;					% user input: how many frames to read   (optional, default until the end)
@@ -117,10 +117,6 @@ figure;
 %% display components
 
 plot_components_GUI(Yr,A_or,C_or,b2,f2,Cn,options)
-
-%% save
-
-save([saveDir '\' 'Yr.mat'],'Yr','-v7.3');
 
 %% make movie
 
